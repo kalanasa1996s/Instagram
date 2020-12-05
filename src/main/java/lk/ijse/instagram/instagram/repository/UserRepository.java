@@ -1,8 +1,11 @@
 package lk.ijse.instagram.instagram.repository;
 
+import lk.ijse.instagram.instagram.entity.Adminuser;
 import lk.ijse.instagram.instagram.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import java.util.Optional;
+
 public interface UserRepository extends JpaRepository<User, Integer> {
-    User findUserByEmail(String Email);
+    Optional<Adminuser> findByUsername(String username);
 }
